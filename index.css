@@ -1,0 +1,159 @@
+/*Las variables se usan cuando un valor se va repetir, y se definen de la siguiente manera, aparte para que funciones se les debe anteponer dos guiones*/
+
+:root{
+    --primary_color1: #13A538;
+    --primary_color2: #009A93;
+    --primary_color3: #008BD2;
+}
+/*Se colocaron los colores hexadecimales de la empresa de acuerdo al diseño, ahora se llaman las variables de la siguiente manera: var y dentro de var el nombre de la variable entre paréntesis, seguido del punto y coma*/
+/* .verde {
+    color: var(--primary_color1);
+}
+.aqua {
+    color: var(--primary_color2);
+}
+.azul {
+    color: var(--primary_color3);
+} */
+
+
+* { /* Dentro de este selector universal definimos los márgenes de la página*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif; 
+    text-align: justify; 
+}
+
+.header .header_nav .header_nav_img { /*Para la imagen logotipo, el nivel de especificidad y las propiedades que se definan en este item no afectarán futuros cambios*/
+    width: 70px;
+}
+
+/* se llama al header y se coloca un color de referencia para tener en cuenta la ubicación de los items dentro de él */
+.header {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 7%, rgba(35,218,121,1) 62%);
+    height: 15vh;
+}
+
+.header .header_nav{ /* Aquí se acomodaron los items de imagen y lista dentro del nav uno al lado del otro */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Aquí se acomodo la lista desordenada y se le quitaron los puntos */
+.header .header_nav .header_nav_ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    width: 76px; /*Con la medida del ancho, me permite el manejar, ubicar y organizar los elementos internos*/
+}
+
+.header_nav_ul li { /*Aquí le dí un tamaño a la caja de lista para lograr un efecto de transición*/
+    padding: 20px 20px;
+    transition: .3s ease-out all;
+}
+
+.header_nav_ul li a { /*Para crear los fondos y transiciones según el nivel de especificidad de lista se realizó lo siguiente*/
+    text-decoration: none;
+    color: white;
+}
+
+.header_nav_ul li:hover { /*Para que al pasar por encima de las letras se creara el efecto de transición se agrego la siguiente regla*/
+   background: white;
+   cursor: pointer;
+}
+.header_nav_ul li a:hover{ /*Para cambiar el color a la letra luego de la transición se agregó otro evento hover*/
+    color: rgba(35,218,121,1);
+}
+
+/*Ahora cree una sección para (inicio) aquí van las imágenes en carrusell*/
+.inicio {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 7%, rgba(35,218,121,1) 62%);
+    
+    min-height: 85vh;   
+    display: flex;
+    align-items: center;
+    
+}
+
+.inicio-cont{
+    width: 50%;
+}
+.foto_perfil_nav_img { 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    border-radius: 20%;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.8);
+    display: block;
+    /* box-shadow: 10px 10xp 10px rgba(0, 0, 0, 0.8); */
+}
+.inicio-descripcion{
+    padding: 20px 60px 20px 20px;
+}
+.inicio-descripcion p{
+    color: white;
+    line-height: 30px;
+}
+
+.inicio-descripcion h2{
+    color: white;
+}
+/*Ahora cree una sección para (Quienes somos) que es un h2 y un párrafo*/
+.somos {
+    background: gray;
+    width: 100vw;
+    height: 85vh;
+    display:grid; /*Al usar display grid se distribuyen las dimensiones de los elementos hijos*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+span.verde {
+    color: var(--primary_color1);
+}
+span.aqua {
+    color: var(--primary_color2);
+}
+span.azul {
+   color: var(--primary_color3);
+}
+
+.logofooter img {
+    width: 20px;
+}
+
+ul {
+    display: flex;
+
+}
+
+.skills {
+    width: 100%;
+    height: 100vh;
+    background-color: #13A538;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.skills-content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 400px;
+}
+
